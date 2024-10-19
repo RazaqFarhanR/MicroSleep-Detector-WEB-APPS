@@ -17,7 +17,7 @@
     "socket.io-client": "^4.7.5",
     "sweetalert2": "^11.14.3",
     "vite-plugin-dts": "^4.2.4",
-    "vite-plugin-svgr": "^4.2.0"
+    "vite-plugin-svgr": "^3.3.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
