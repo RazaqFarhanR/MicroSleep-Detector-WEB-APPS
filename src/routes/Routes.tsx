@@ -7,6 +7,7 @@ import Users from '../pages/users/Users';
 import Device from '../pages/device/Device';
 import Report from '../pages/report/report';
 import AddDevice from '../pages/device/AddDevice';
+import Helper from '../pages/Helper';
 
 const AppRoutes = () => {
   return (
@@ -19,6 +20,7 @@ const AppRoutes = () => {
             <Route path="/report" element={<Report />} />
         </Route>
         <Route path='/login' element={<Login/>}/>
+        <Route path='/helper' element={<Helper/>}/>
         <Route path="*" element={<NotFound />} />
       </Routes>
   );
