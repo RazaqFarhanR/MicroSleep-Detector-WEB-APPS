@@ -3,13 +3,15 @@ import React from 'react';
 // Define types for the props
 interface ButtonComponentProps {
   currentPage: '/users' | '/report' | string;
-  onViewDetails: () => void;  
+  item: any,
+  onViewDetails: (a: any) => void;  
   onEdit: () => void;
   onDelete: () => void;
 }
 
 const ActionButtonComponent: React.FC<ButtonComponentProps> = ({
   currentPage,
+  item,
   onViewDetails,
   onEdit,
   onDelete
@@ -21,7 +23,7 @@ const ActionButtonComponent: React.FC<ButtonComponentProps> = ({
           className="btn btn-sm btn-info w-10 h-10 p-0"
           title="View Details"
           aria-label="View Details"
-          onClick={onViewDetails}  // Call the view details function when clicked
+          onClick={() => onViewDetails(item)}
         >
           <svg
             className="w-6 h-6"
@@ -42,11 +44,11 @@ const ActionButtonComponent: React.FC<ButtonComponentProps> = ({
         </button>
       ) : (
         <>
-          <button
+          {/* <button
             className="btn btn-sm btn-info w-10 h-10 p-0"
             title="View Details"
             aria-label="View Details"
-            onClick={onViewDetails}  // Call the view details function when clicked
+            onClick={onViewDetails}
           >
             <svg
               className="w-6 h-6"
@@ -64,13 +66,13 @@ const ActionButtonComponent: React.FC<ButtonComponentProps> = ({
                 strokeLinejoin="round"
               />
             </svg>
-          </button>
+          </button> */}
 
           <button
             className="btn btn-sm btn-primary w-10 h-10 p-0"
             title="Edit"
             aria-label="Edit"
-            onClick={onEdit}  // Call the edit function when clicked
+            onClick={onEdit}
           >
             <svg
               className="size-5"
@@ -91,7 +93,7 @@ const ActionButtonComponent: React.FC<ButtonComponentProps> = ({
             className="btn btn-sm btn-error text-white w-10 h-10 p-0"
             title="Delete"
             aria-label="Delete"
-            onClick={onDelete}  // Call the delete function when clicked
+            onClick={onDelete}
           >
             <svg
               className="w-6 h-6"
