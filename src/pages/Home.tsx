@@ -4,7 +4,7 @@ const Home = () => {
   const data = [
     {
       name: 'All Users',
-      count: 100, // Example count
+      count: 5, // Example count
       icon: (
           <svg 
             className="w-10 h-10"
@@ -16,7 +16,7 @@ const Home = () => {
     },
     {
       name: 'All Devices',
-      count: 50, // Example count
+      count: 100, // Example count
       icon: (
         <svg 
         xmlns="http://www.w3.org/2000/svg" 
@@ -33,8 +33,8 @@ const Home = () => {
       ),
     },
     {
-      name: 'Online Users',
-      count: 25, // Example count
+      name: 'Activated Device',
+      count: 3, // Example count
       icon: (
         <svg 
           className="size-10"
@@ -46,7 +46,7 @@ const Home = () => {
     },
     {
       name: 'Accidents',
-      count: 0, // Example count
+      count: 1, // Example count
       icon: (
         <svg 
           className="size-10"
